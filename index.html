@@ -1,0 +1,71 @@
+<!-- 
+Name: Ethan Cumming
+Email: Ethan_Cumming@student.uml.edu
+Affiliation: Student in comp.4610 GUI Programming I
+Date: Nov 19th, 2017
+Description: In Homework 5, I used the JQuery/Boostrap Validator Plugin to check inputs. I used both css and js features of the plugin
+to accomplish my task. I also changed all of my input to bootstap. Using bootstrap on top of JQuery is what I consider to be the 'Impress me' 
+portion of my grade since it adds another layer of complexity.
+ -->
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+
+  <title>HW5</title>
+  <meta name="dynamic table" content="HW4">
+  <meta name="Ethan Cumming" content="Table">
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
+</head>
+
+
+<body><!-- Form Markup -->
+  <h1>Homework 5 - Dynamic Table With Error Handling</h1>
+  <form data-toggle="validator" role="form" Id="myForm" class="col-sm-6" onSubmit="return false;">
+    <div class="form-group">
+        <div class="form-group">
+          Enter Col Name: <input type="text" class="form-control" id="rowname"  placeholder="Name"required/><br>
+        </div>
+          <!-- Enter Amount of MPG: <input type="number" class="qty" id="rowcount" placeholder="Enter 1 to 7"/><br> -->
+          <div class="form-group">
+          Enter Row Name: <input type="text" id="columnname" class="form-control" placeholder="Name"required/><br>
+          </div>
+          <div class="form-group">
+          Enter Number Amount of Col: <input type="number" max="7" class="form-control qty"  id="rowcount" placeholder="Enter 1 to 7" required/><br>
+          </div>
+          <!-- Enter Amount of MPG: <input type="number" class="qty" id="rowcount" placeholder="Enter 1 to 7"/><br> -->
+          <div class="form-group">
+          Enter Number Amount of Rows : <input type="number" max="7"class="form-control qty" id="columncount" placeholder="Enter 1 to 7" required/><br>
+          </div>
+          <!-- <input type="button submit" class="btn btn-primary" value="Create Table" onclick="createTable();"/> -->
+          <!-- <button type="submit" id="createTable" class="btn btn-primary" >Create Table</button> -->
+          <div class="form-group">
+              <button class="btn btn-primary" id="createTable" type="submit"> Submit</button>
+          </div>
+          <button type="button" class="btn btn-default" onclick="deleteTable()">Delete Tables</button>
+    </div>
+  </form>
+          <!-- Table Markup -->
+          <div id="box">
+          </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
